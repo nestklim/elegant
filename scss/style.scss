@@ -1,0 +1,295 @@
+@import "normalize";
+@import "layout";
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400|Raleway:700');
+
+$primary-font: 'Lato', sans-serif;
+$heading-font: 'Raleway', sans-serif;
+
+body{
+	font: 400 16px/1.3 $primary-font;
+	color: #222;
+	text-align: center;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1210px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $heading-font;
+	margin: 0 0 140px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.00em;
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	text-decoration: none;
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	color: currentColor;
+	display: inline-block;
+	font-size: 24px;
+	min-height: 54px;
+	line-height: 54px;
+	padding: 0 150px;
+	border: 3px solid currentColor;
+	text-transform: uppercase;
+	background: none;
+
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	color: #fed62f;
+}
+
+.ba-button:active{
+	transform: translateY(2px);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	outline: none;
+	display: block;
+	color: #676767;
+	background: none;
+	border: none;
+	border-bottom: 1px solid currentColor;
+	width: 100%;
+		&:placeholder{
+		color: currentColor;
+	}
+
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+.ba-header{
+	color: #FFF;
+	background: #001018 url(../img/bg-hed.jpg) 50% no-repeat;
+	background-size: cover;
+	padding: 50px 0 390px;
+	position: relative;
+	&-menu{
+		padding-bottom: 250px;
+		.ba-logo{
+			float: left;
+		}
+		nav{
+			float: right;
+			display: inline-block;
+			a{
+				color: #FFF;
+				margin-left: 45px;
+				font-size: 14px;
+
+			}
+		}
+	}
+	&__title{
+		font-size: 48px;
+	}
+	p{
+		font-size: 22px;
+		max-width: 600px;
+		display: inline-block;
+	}
+}
+.ba-scroll{
+	display: block;
+	width: 92px;
+	height: 92px;
+	position: absolute;
+	bottom: 47px;
+	left: 50%;
+	margin-left: -46px;
+	background: url(../img/svg/scroll.svg) 50% no-repeat;
+	background-size: cover;
+	&:hover{
+		opacity: .6;
+	}
+}
+.ba-services{
+	padding: 116px 0 119px;
+	&__title{
+		font-size: 35px;
+		margin-bottom: 85px;
+	}
+	p{
+		max-width: 320px;
+		display: inline-block;
+		text-align: center;
+	}
+}
+.ba-dolore{
+	color: #FFF;
+	background: #222 url(../img/dolore.png) 50% no-repeat;
+	background-size: cover;
+	text-align: left;
+	padding: 173px 0;
+	position: relative;
+	&__title{
+		font-family: $primary-font;
+		font-size: 45px;
+		font-weight: 400;
+	}
+	p{
+		font-size: 22px;
+		font-weight: 100;
+		margin: 10px 0 60px;
+	}
+	a{
+		text-decoration: underline;
+		color: #FFF;
+
+	}
+	&:before{
+		content: url(../img/tel.png);
+		position: absolute;
+		bottom: 0;
+		right: 20%;
+	}
+}
+.ba-work{
+	padding: 100px 0 80px;
+	&__title{
+		font-size: 35px;
+		margin-bottom: 90px;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+	.ba-button{
+		margin-top: 79px;
+	}
+	&__img{
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		color: #FFF;
+		&:hover{
+			.ba-work__overlay{
+				opacity: 0.9;
+				transition: opasiti .3s ease-in;
+			}
+		}
+	}
+	&__overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #404040;
+		opacity: 0.0;
+		transition: opasiti .3s ease-in;
+		h3{
+			margin-top: 170px;
+			font-size: 22px;
+			&:after{
+				content: url(../img/svg/link.svg);
+				display: block;
+				margin-top: 40px;
+			}
+		}
+	}
+}
+.ba-footer{
+	color: #FFF;
+	padding: 115px 0 122px;
+	background: #001018 url(../img/bg.jpg) 50% no-repeat;
+	background-size: cover;
+
+}
+.ba-socials{
+	padding: 70px 0;
+	a{
+		margin: 0 15px;
+		&:hover{
+			svg{
+				.cls-1 {
+				fill: #fed62f;
+				}
+			}
+		}
+
+
+	}
+}
+.ba-form{
+	max-width: 674px;
+	margin: 0 auto;
+	padding-top: 60px;
+	.ba-message{
+		margin-top: 90px;
+	}
+	.ba-button{
+		margin-top: 60px;
+		padding: 0 50px;
+	}
+}
+
+.ba-row{
+    margin-left: -30px;
+}
+.ba-row + .ba-row{
+    margin-top: 30px;
+}
+.ba-row > [class*="ba-width-"]{
+    float: left;
+    padding-left: 30px;
+}
+.ba-title{
+	position: relative;
+	display: inline-block;
+	&:before{
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 90px;
+		display: block;
+		color: currentColor;
+		bottom: 0;
+		left: 0;
+		margin-left: -45px;
+	}
+}
